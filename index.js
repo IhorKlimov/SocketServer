@@ -1,4 +1,4 @@
-const { createServer } = require('node:http');
+const { createServer } = require('http');
 const { Server } = require("socket.io");
 const port = process.env.PORT || 5000;
 
