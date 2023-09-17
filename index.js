@@ -1,6 +1,7 @@
 const { log } = require('node:console');
 const { createServer } = require('node:http');
 const { Server } = require("socket.io");
+const port = process.env.PORT || 5000;
 
 
 const httpServer = createServer();
@@ -27,4 +28,5 @@ sockserver.on('connection', (ws) => {
     });
 });
 
-httpServer.listen(443);
+httpServer.listen(port);
+console.log("Running on " + port);
